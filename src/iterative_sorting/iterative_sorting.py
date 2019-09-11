@@ -21,9 +21,9 @@ def selection_sort(arr):
 
 '''
 def selection_sort(arr):                    defines function with array being passed in
-    for i in range(0, len(arr) - 1):        setting for loop to go through over each item
+    for i in range(0, len(arr) - 1):        setting for loop to go through over each item until stopping at the last item
         cur_index = i                       setting i as the current index
-        smallest_index = cur_index          setting current index as the smallest number
+        smallest_index = cur_index          setting smallest number as the current_index
 
         for s in range(i+1, len(arr)):              setting for loop to look for smallest number
             if arr[s] < arr[smallest_index]:        if this for loop smallest number is smaller than the smallest_index number
@@ -49,6 +49,16 @@ def bubble_sort(arr):
 
 
 '''
+def bubble_sort(arr):
+    flag = True
+    while flag == True:
+        flag = False
+        for i in range(0, len(arr) - 1):
+            if arr[i] > arr[i+1]:
+                arr[i], arr[i+1] = arr[i+1], arr[i]
+                flag = True
+    return arr
+
 def bubble_sort(arr):                                       defines function with array being passed in
     for i in range(0, len(arr) - 1):                        setting for loop to go over the array
         for n in range(0, len(arr) - 1 - i ):               setting inner for loop to go over the array minus the current outer loop number
